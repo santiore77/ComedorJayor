@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Menú Semanal</title>
+  <style>
+    /* General */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+
+    header {
+      text-align: center;
+      background-color: #007BFF; /* Azul */
+      padding: 20px;
+      color: white;
+    }
+
+    header img {
+      max-width: 100px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    form {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      max-width: 800px;
+      margin: 20px auto;
+    }
+
+    h2 {
+      margin-top: 20px;
+      color: #007BFF; /* Azul */
+      border-bottom: 2px solid #007BFF;
+      padding-bottom: 5px;
+    }
+
+    label {
+      font-weight: bold;
+      margin-top: 10px;
+      display: block;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: #f9f9f9;
+      font-size: 16px;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      background-color: #007BFF; /* Azul */
+      color: white;
+      border: none;
+      padding: 15px 20px;
+      font-size: 18px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3; /* Azul oscuro */
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 600px) {
+      form {
+        padding: 15px;
+      }
+
+      input, select {
+        font-size: 14px;
+      }
+
+      button {
+        font-size: 16px;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="jayorlogo.png" alt="Logo de la empresa" />
+    <h1>Formulario de Menú Semanal</h1>
+  </header>
+
+  <form id="menu-semanal-form">
+    <!-- Información del empleado -->
+    <div>
+      <h2>Información del Empleado</h2>
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre completo" required />
+
+      <label for="puesto">Puesto</label>
+      <input type="text" id="puesto" name="puesto" placeholder="Escribe tu puesto" required />
+
+      <label for="legajo">Legajo</label>
+      <input type="text" id="legajo" name="legajo" placeholder="Número de legajo" required />
+    </div>
+
+    <!-- Menú semanal -->
+    <div>
+      <h2>Lunes</h2>
+      <label for="almuerzo-lunes">Almuerzo</label>
+      <select id="almuerzo-lunes" name="almuerzo-lunes" required>
+        <option value="pollo-arroz">Pollo con arroz</option>
+        <option value="pasta-boloñesa">Pasta con salsa boloñesa</option>
+        <option value="ensalada-cesar">Ensalada César</option>
+        <option value="n/a">N/A</option>
+      </select>
+
+      <label for="cena-lunes">Cena</label>
+      <select id="cena-lunes" name="cena-lunes" required>
+        <option value="sopa-vegetales">Sopa de vegetales</option>
+        <option value="sandwich-jamon">Sandwich de jamón y queso</option>
+        <option value="tacos-pollo">Tacos de pollo</option>
+        <option value="n/a">N/A</option>
+      </select>
+    </div>
+    <div>
+      <h2>Martes</h2>
+      <label for="almuerzo-martes">Almuerzo</label>
+      <select id="almuerzo-martes" name="almuerzo-martes" required>
+        <option value="pollo-arroz">Pollo con arroz</option>
+        <option value="pasta-boloñesa">Pasta con salsa boloñesa</option>
+        <option value="ensalada-cesar">Ensalada César</option>
+        <option value="n/a">N/A</option>
+      </select>
+
+      <label for="cena-martes">Cena</label>
+      <select id="cena-martes" name="cena-martes" required>
+        <option value="sopa-vegetales">Sopa de vegetales</option>
+        <option value="sandwich-jamon">Sandwich de jamón y queso</option>
+        <option value="tacos-pollo">Tacos de pollo</option>
+      </select>
+    </div>
+    <div>
+      <h2>Miercoles</h2>
+      <label for="almuerzo-miercoles">Almuerzo</label>
+      <select id="almuerzo-miercoles" name="almuerzo-miercoles" required>
+        <option value="pollo-arroz">Pollo con arroz</option>
+        <option value="pasta-boloñesa">Pasta con salsa boloñesa</option>
+        <option value="ensalada-cesar">Ensalada César</option>
+        <option value="n/a">N/A</option>
+      </select>
+
+      <label for="cena-miercoles">Cena</label>
+      <select id="cena-miercoles" name="cena-miercoles" required>
+        <option value="sopa-vegetales">Sopa de vegetales</option>
+        <option value="sandwich-jamon">Sandwich de jamón y queso</option>
+        <option value="tacos-pollo">Tacos de pollo</option>
+      </select>
+    </div>
+
+    <button type="submit">Guardar Menú</button>
+  </form>
+
+  <script>
+    document.getElementById('menu-semanal-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+      alert("Formulario enviado correctamente");
+    });
+  </script>
+</body>
+</html>
